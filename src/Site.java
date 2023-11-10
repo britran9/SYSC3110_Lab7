@@ -16,4 +16,7 @@ public class Site {
         return this.rate;
     }
 
+    public static double getBillableAmount(double base, double tax) {
+        return base + tax;
+    }
 }
