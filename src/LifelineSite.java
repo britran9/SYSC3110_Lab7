@@ -3,9 +3,10 @@ public class LifelineSite extends Site{
         super(units, rate);
     }
 
-    public double getBillableAmount(){
-        double base = this.getUnits() * this.getRate() * 0.5;
-        double tax = base * Site.TAX_RATE * 0.2;
-        return getBillableAmount(base, tax);
+    public double getBaseAmount(){
+        return this.getUnits() * this.getRate() * 0.5;
+    }
+    public double getTax(){
+        return this.getBaseAmount() * Site.TAX_RATE * 0.2;
     }
 }
